@@ -43,12 +43,6 @@ print("Starts between C and G, inclusive:")
 c = [x.name for x in humans for y in ["C", "D", "E", "F", "G"] if y == x.name[0]]
 print(c)
 
-# for x in humans:
-#     for y in ["C", "E", "F", "G"]:
-#         if y == x.name[0]:
-#             print(x.name)
-
-
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
 d = [i.age + 10 for i in humans]
@@ -67,21 +61,10 @@ print("Names and ages between 27 and 32:")
 f = [(i.name, i.age) for i in humans if i.age >= 27 and i.age <= 32]
 print(f)
 
-# for i in humans:
-#     if i.age >= 27 and i.age <= 32:
-#         print((i.name, i.age))
-
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names capitalized and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names capitalized:")
-
-
-def func(n):
-    print(n)
-    for i in n:
-        return (i.name.capitalize(), i.age+5)
-
 
 g = [Human(i.name.upper(), i.age+5) for i in humans]
 print(g)
